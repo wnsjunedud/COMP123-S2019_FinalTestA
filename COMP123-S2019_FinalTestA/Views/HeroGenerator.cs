@@ -284,11 +284,33 @@ namespace COMP123_S2019_FinalTestA.Views
             Program.character.Endurance = GA4Label.Text;
             
         }
-        private void GenerateEverythingButton_Click(object sender, EventArgs e)
+        private void GenerateEverythingName()
         {
 
-            GenerateEverythingAvility();
+            string FirstNamesFile = @"..\..\Data\firstNames.txt";
+            var ReadFirstNames = File.ReadAllLines(FirstNamesFile);
+            List<string> FirstNameList = ReadFirstNames.ToList();
+            int FirstNameEndNumber = ReadFirstNames.Length;
+            int FirstNameRadomNumber = new Random().Next(0, FirstNameEndNumber);
+            FirstNameDataLabel.Text = FirstNameList[FirstNameRadomNumber];
+            Program.character.FirstName = FirstNameDataLabel.Text;
 
+            string LastNamesFile = @"..\..\Data\lastNames.txt";
+            var ReadLastNames = File.ReadAllLines(LastNamesFile);
+            List<string> LastNameList = ReadLastNames.ToList();
+            int LastNameEndNumber = ReadLastNames.Length;
+            int LastNameRadomNumber = new Random().Next(0, LastNameEndNumber);
+            LastNameDataLabel.Text = LastNameList[LastNameRadomNumber];
+            Program.character.LastName = LastNameList[LastNameRadomNumber];
+
+            HeroNameTextBox.Text = FirstNameDataLabel.Text + ' ' + LastNameDataLabel.Text;
+            Program.character.HeroName = HeroNameTextBox.Text;
+
+        }
+        private void GenerateEverythingButton_Click(object sender, EventArgs e)
+        {
+            GenerateEverythingName();
+            GenerateEverythingAvility();
             GenerateEverythingPowers();
 
         }
