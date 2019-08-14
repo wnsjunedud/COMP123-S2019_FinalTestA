@@ -56,5 +56,10 @@ namespace COMP123_S2019_FinalTestA.Views
         {
 
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
