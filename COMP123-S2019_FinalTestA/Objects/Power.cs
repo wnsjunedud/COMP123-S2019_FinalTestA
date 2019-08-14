@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 /*
  * Student Name : Juneyeong Lee
  * Student Id : 301043697
- * Description : This is the Hero Data Container Class
+ * Description : This is the Power Class
  */
 
 namespace COMP123_S2019_FinalTestA.Objects
@@ -15,7 +15,7 @@ namespace COMP123_S2019_FinalTestA.Objects
     class Power
     {
     //public Properties
-    public string Name {get;set;}
-    public int Number {get;set;}
+    public string Name { get; set; }
+    public int Number { get; set; }
     }
 }
