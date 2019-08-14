@@ -39,6 +39,7 @@
             this.FirstNameLabel = new System.Windows.Forms.Label();
             this.HeroNameLabel = new System.Windows.Forms.Label();
             this.AbilityPage = new System.Windows.Forms.TabPage();
+            this.GenerateAbilitiesButton = new System.Windows.Forms.Button();
             this.AbilityTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.FightingLabel = new System.Windows.Forms.Label();
             this.MentalLabel = new System.Windows.Forms.Label();
@@ -59,8 +60,36 @@
             this.PopularityLabel = new System.Windows.Forms.Label();
             this.PhysicalLabel = new System.Windows.Forms.Label();
             this.PowersPage = new System.Windows.Forms.TabPage();
+            this.GeneratePowersButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.CharacterSheet = new System.Windows.Forms.TabPage();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.NameNLabel = new System.Windows.Forms.Label();
+            this.GenerateEverythingButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.GN2Label = new System.Windows.Forms.Label();
+            this.GN3Label = new System.Windows.Forms.Label();
+            this.GN4Label = new System.Windows.Forms.Label();
+            this.GP1Label = new System.Windows.Forms.Label();
+            this.GP2Label = new System.Windows.Forms.Label();
+            this.GP3Label = new System.Windows.Forms.Label();
+            this.GP4Label = new System.Windows.Forms.Label();
+            this.GN1Label = new System.Windows.Forms.Label();
+            this.GA1Label = new System.Windows.Forms.Label();
+            this.GA2Label = new System.Windows.Forms.Label();
+            this.GA3Label = new System.Windows.Forms.Label();
+            this.GA4Label = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.saveToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -70,6 +99,8 @@
             this.HeroMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.charactertxtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.powertxtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -83,15 +114,14 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.NextButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
-            this.charactertxtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.powertxtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.GenerateAbilitiesButton = new System.Windows.Forms.Button();
             this.MainTabControl.SuspendLayout();
             this.IdentityPage.SuspendLayout();
             this.AbilityPage.SuspendLayout();
             this.AbilityTableLayoutPanel.SuspendLayout();
             this.PowersPage.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.CharacterSheet.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.HeroMenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -201,6 +231,16 @@
             this.AbilityPage.TabIndex = 0;
             this.AbilityPage.Text = "Abilities";
             this.AbilityPage.UseVisualStyleBackColor = true;
+            // 
+            // GenerateAbilitiesButton
+            // 
+            this.GenerateAbilitiesButton.Location = new System.Drawing.Point(200, 176);
+            this.GenerateAbilitiesButton.Name = "GenerateAbilitiesButton";
+            this.GenerateAbilitiesButton.Size = new System.Drawing.Size(383, 37);
+            this.GenerateAbilitiesButton.TabIndex = 20;
+            this.GenerateAbilitiesButton.Text = "Generate Abilities";
+            this.GenerateAbilitiesButton.UseVisualStyleBackColor = true;
+            this.GenerateAbilitiesButton.Click += new System.EventHandler(this.GenerateAbilitiesButton_Click);
             // 
             // AbilityTableLayoutPanel
             // 
@@ -392,6 +432,7 @@
             this.ReasonDataLabel.Size = new System.Drawing.Size(110, 30);
             this.ReasonDataLabel.TabIndex = 9;
             this.ReasonDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ReasonDataLabel.Click += new System.EventHandler(this.ReasonDataLabel_Click);
             // 
             // PopularityLabel
             // 
@@ -414,6 +455,7 @@
             // 
             // PowersPage
             // 
+            this.PowersPage.Controls.Add(this.GeneratePowersButton);
             this.PowersPage.Controls.Add(this.tableLayoutPanel1);
             this.PowersPage.Location = new System.Drawing.Point(8, 39);
             this.PowersPage.Name = "PowersPage";
@@ -423,6 +465,16 @@
             this.PowersPage.Text = "Powers";
             this.PowersPage.UseVisualStyleBackColor = true;
             // 
+            // GeneratePowersButton
+            // 
+            this.GeneratePowersButton.Location = new System.Drawing.Point(188, 188);
+            this.GeneratePowersButton.Name = "GeneratePowersButton";
+            this.GeneratePowersButton.Size = new System.Drawing.Size(383, 37);
+            this.GeneratePowersButton.TabIndex = 21;
+            this.GeneratePowersButton.Text = "Generate Powers";
+            this.GeneratePowersButton.UseVisualStyleBackColor = true;
+            this.GeneratePowersButton.Click += new System.EventHandler(this.GeneratePowersButton_Click);
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 4;
@@ -430,6 +482,14 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label5, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label6, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 3, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(19, 24);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -440,8 +500,94 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(723, 131);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Location = new System.Drawing.Point(183, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 30);
+            this.label1.TabIndex = 2;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Location = new System.Drawing.Point(183, 32);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 30);
+            this.label2.TabIndex = 3;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Location = new System.Drawing.Point(183, 64);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 30);
+            this.label3.TabIndex = 4;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Location = new System.Drawing.Point(183, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 30);
+            this.label4.TabIndex = 5;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Location = new System.Drawing.Point(543, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(110, 30);
+            this.label5.TabIndex = 6;
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Location = new System.Drawing.Point(543, 32);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 30);
+            this.label6.TabIndex = 7;
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.Location = new System.Drawing.Point(543, 64);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 30);
+            this.label7.TabIndex = 8;
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.Location = new System.Drawing.Point(543, 96);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(110, 30);
+            this.label8.TabIndex = 9;
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // CharacterSheet
             // 
+            this.CharacterSheet.Controls.Add(this.label25);
+            this.CharacterSheet.Controls.Add(this.label24);
+            this.CharacterSheet.Controls.Add(this.label23);
+            this.CharacterSheet.Controls.Add(this.NameNLabel);
+            this.CharacterSheet.Controls.Add(this.GenerateEverythingButton);
+            this.CharacterSheet.Controls.Add(this.tableLayoutPanel2);
             this.CharacterSheet.Controls.Add(this.toolStrip1);
             this.CharacterSheet.Controls.Add(this.HeroMenuStrip);
             this.CharacterSheet.Location = new System.Drawing.Point(8, 39);
@@ -451,6 +597,213 @@
             this.CharacterSheet.TabIndex = 3;
             this.CharacterSheet.Text = "Character Sheet";
             this.CharacterSheet.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(565, 112);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(106, 24);
+            this.label25.TabIndex = 26;
+            this.label25.Text = "G-Power";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(382, 112);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(99, 24);
+            this.label24.TabIndex = 25;
+            this.label24.Text = "G-Ability";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(198, 112);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(96, 24);
+            this.label23.TabIndex = 24;
+            this.label23.Text = "G-Name";
+            // 
+            // NameNLabel
+            // 
+            this.NameNLabel.AutoSize = true;
+            this.NameNLabel.Location = new System.Drawing.Point(44, 112);
+            this.NameNLabel.Name = "NameNLabel";
+            this.NameNLabel.Size = new System.Drawing.Size(67, 24);
+            this.NameNLabel.TabIndex = 23;
+            this.NameNLabel.Text = "Name";
+            // 
+            // GenerateEverythingButton
+            // 
+            this.GenerateEverythingButton.Location = new System.Drawing.Point(189, 329);
+            this.GenerateEverythingButton.Name = "GenerateEverythingButton";
+            this.GenerateEverythingButton.Size = new System.Drawing.Size(383, 37);
+            this.GenerateEverythingButton.TabIndex = 22;
+            this.GenerateEverythingButton.Text = "Generate Everything";
+            this.GenerateEverythingButton.UseVisualStyleBackColor = true;
+            this.GenerateEverythingButton.Click += new System.EventHandler(this.GenerateEverythingButton_Click);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.GN2Label, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.GN3Label, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.GN4Label, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.GP1Label, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.GP2Label, 3, 1);
+            this.tableLayoutPanel2.Controls.Add(this.GP3Label, 3, 2);
+            this.tableLayoutPanel2.Controls.Add(this.GP4Label, 3, 3);
+            this.tableLayoutPanel2.Controls.Add(this.GN1Label, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.GA1Label, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.GA2Label, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.GA3Label, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.GA4Label, 2, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label21, 0, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 160);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(723, 131);
+            this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // GN2Label
+            // 
+            this.GN2Label.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.GN2Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GN2Label.Location = new System.Drawing.Point(183, 32);
+            this.GN2Label.Name = "GN2Label";
+            this.GN2Label.Size = new System.Drawing.Size(110, 30);
+            this.GN2Label.TabIndex = 3;
+            this.GN2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // GN3Label
+            // 
+            this.GN3Label.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.GN3Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GN3Label.Location = new System.Drawing.Point(183, 64);
+            this.GN3Label.Name = "GN3Label";
+            this.GN3Label.Size = new System.Drawing.Size(110, 30);
+            this.GN3Label.TabIndex = 4;
+            this.GN3Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // GN4Label
+            // 
+            this.GN4Label.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.GN4Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GN4Label.Location = new System.Drawing.Point(183, 96);
+            this.GN4Label.Name = "GN4Label";
+            this.GN4Label.Size = new System.Drawing.Size(110, 30);
+            this.GN4Label.TabIndex = 5;
+            this.GN4Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // GP1Label
+            // 
+            this.GP1Label.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.GP1Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GP1Label.Location = new System.Drawing.Point(543, 0);
+            this.GP1Label.Name = "GP1Label";
+            this.GP1Label.Size = new System.Drawing.Size(110, 30);
+            this.GP1Label.TabIndex = 6;
+            this.GP1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // GP2Label
+            // 
+            this.GP2Label.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.GP2Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GP2Label.Location = new System.Drawing.Point(543, 32);
+            this.GP2Label.Name = "GP2Label";
+            this.GP2Label.Size = new System.Drawing.Size(110, 30);
+            this.GP2Label.TabIndex = 7;
+            this.GP2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // GP3Label
+            // 
+            this.GP3Label.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.GP3Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GP3Label.Location = new System.Drawing.Point(543, 64);
+            this.GP3Label.Name = "GP3Label";
+            this.GP3Label.Size = new System.Drawing.Size(110, 30);
+            this.GP3Label.TabIndex = 8;
+            this.GP3Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // GP4Label
+            // 
+            this.GP4Label.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.GP4Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GP4Label.Location = new System.Drawing.Point(543, 96);
+            this.GP4Label.Name = "GP4Label";
+            this.GP4Label.Size = new System.Drawing.Size(110, 30);
+            this.GP4Label.TabIndex = 9;
+            this.GP4Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // GN1Label
+            // 
+            this.GN1Label.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.GN1Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GN1Label.Location = new System.Drawing.Point(183, 0);
+            this.GN1Label.Name = "GN1Label";
+            this.GN1Label.Size = new System.Drawing.Size(110, 30);
+            this.GN1Label.TabIndex = 2;
+            this.GN1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // GA1Label
+            // 
+            this.GA1Label.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.GA1Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GA1Label.Location = new System.Drawing.Point(363, 0);
+            this.GA1Label.Name = "GA1Label";
+            this.GA1Label.Size = new System.Drawing.Size(110, 30);
+            this.GA1Label.TabIndex = 10;
+            this.GA1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // GA2Label
+            // 
+            this.GA2Label.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.GA2Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GA2Label.Location = new System.Drawing.Point(363, 32);
+            this.GA2Label.Name = "GA2Label";
+            this.GA2Label.Size = new System.Drawing.Size(110, 30);
+            this.GA2Label.TabIndex = 11;
+            this.GA2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // GA3Label
+            // 
+            this.GA3Label.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.GA3Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GA3Label.Location = new System.Drawing.Point(363, 64);
+            this.GA3Label.Name = "GA3Label";
+            this.GA3Label.Size = new System.Drawing.Size(110, 30);
+            this.GA3Label.TabIndex = 12;
+            this.GA3Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // GA4Label
+            // 
+            this.GA4Label.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.GA4Label.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.GA4Label.Location = new System.Drawing.Point(363, 96);
+            this.GA4Label.Name = "GA4Label";
+            this.GA4Label.Size = new System.Drawing.Size(110, 30);
+            this.GA4Label.TabIndex = 13;
+            this.GA4Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label21
+            // 
+            this.label21.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label21.Location = new System.Drawing.Point(3, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(110, 30);
+            this.label21.TabIndex = 14;
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // toolStrip1
             // 
@@ -538,14 +891,26 @@
             this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(262, 38);
             this.openToolStripMenuItem.Text = "&Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // charactertxtToolStripMenuItem
+            // 
+            this.charactertxtToolStripMenuItem.Name = "charactertxtToolStripMenuItem";
+            this.charactertxtToolStripMenuItem.Size = new System.Drawing.Size(247, 38);
+            this.charactertxtToolStripMenuItem.Text = "Character.txt";
+            // 
+            // powertxtToolStripMenuItem
+            // 
+            this.powertxtToolStripMenuItem.Name = "powertxtToolStripMenuItem";
+            this.powertxtToolStripMenuItem.Size = new System.Drawing.Size(247, 38);
+            this.powertxtToolStripMenuItem.Text = "Power.txt";
             // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(321, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(259, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -553,24 +918,24 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(262, 38);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(321, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(259, 6);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(321, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(259, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(262, 38);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -589,30 +954,30 @@
             // contentsToolStripMenuItem
             // 
             this.contentsToolStripMenuItem.Name = "contentsToolStripMenuItem";
-            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
+            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(210, 38);
             this.contentsToolStripMenuItem.Text = "&Contents";
             // 
             // indexToolStripMenuItem
             // 
             this.indexToolStripMenuItem.Name = "indexToolStripMenuItem";
-            this.indexToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
+            this.indexToolStripMenuItem.Size = new System.Drawing.Size(210, 38);
             this.indexToolStripMenuItem.Text = "&Index";
             // 
             // searchToolStripMenuItem
             // 
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(210, 38);
             this.searchToolStripMenuItem.Text = "&Search";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(321, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(207, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(210, 38);
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -636,28 +1001,6 @@
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
-            // charactertxtToolStripMenuItem
-            // 
-            this.charactertxtToolStripMenuItem.Name = "charactertxtToolStripMenuItem";
-            this.charactertxtToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
-            this.charactertxtToolStripMenuItem.Text = "Character.txt";
-            // 
-            // powertxtToolStripMenuItem
-            // 
-            this.powertxtToolStripMenuItem.Name = "powertxtToolStripMenuItem";
-            this.powertxtToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
-            this.powertxtToolStripMenuItem.Text = "Power.txt";
-            // 
-            // GenerateAbilitiesButton
-            // 
-            this.GenerateAbilitiesButton.Location = new System.Drawing.Point(200, 176);
-            this.GenerateAbilitiesButton.Name = "GenerateAbilitiesButton";
-            this.GenerateAbilitiesButton.Size = new System.Drawing.Size(383, 37);
-            this.GenerateAbilitiesButton.TabIndex = 20;
-            this.GenerateAbilitiesButton.Text = "Generate Abilities";
-            this.GenerateAbilitiesButton.UseVisualStyleBackColor = true;
-            this.GenerateAbilitiesButton.Click += new System.EventHandler(this.GenerateAbilitiesButton_Click);
-            // 
             // HeroGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
@@ -675,8 +1018,10 @@
             this.AbilityPage.ResumeLayout(false);
             this.AbilityTableLayoutPanel.ResumeLayout(false);
             this.PowersPage.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.CharacterSheet.ResumeLayout(false);
             this.CharacterSheet.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.HeroMenuStrip.ResumeLayout(false);
@@ -744,5 +1089,33 @@
         private System.Windows.Forms.ToolStripMenuItem charactertxtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem powertxtToolStripMenuItem;
         private System.Windows.Forms.Button GenerateAbilitiesButton;
+        private System.Windows.Forms.Button GeneratePowersButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label NameNLabel;
+        private System.Windows.Forms.Button GenerateEverythingButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label GN2Label;
+        private System.Windows.Forms.Label GN3Label;
+        private System.Windows.Forms.Label GN4Label;
+        private System.Windows.Forms.Label GP1Label;
+        private System.Windows.Forms.Label GP2Label;
+        private System.Windows.Forms.Label GP3Label;
+        private System.Windows.Forms.Label GP4Label;
+        private System.Windows.Forms.Label GN1Label;
+        private System.Windows.Forms.Label GA1Label;
+        private System.Windows.Forms.Label GA2Label;
+        private System.Windows.Forms.Label GA3Label;
+        private System.Windows.Forms.Label GA4Label;
+        private System.Windows.Forms.Label label21;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COMP123_S2019_FinalTestA.Objects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -133,6 +134,60 @@ namespace COMP123_S2019_FinalTestA.Views
         }
 
 
+
+        private void GeneratePowersButton_Click(object sender, EventArgs e)
+        {
+            string PowerFile = @"..\..\Data\powers.txt";
+            var ReadPowers = File.ReadAllLines(PowerFile);
+            List<string> PowerList = ReadPowers.ToList();
+            int PowerEndNumber = ReadPowers.Length;
+
+            List<int> randomNumbers = new List<int>();
+            for (int i = 0; i < 8; i++)
+            {
+                int number;
+
+                do number = new Random().Next(0, PowerEndNumber);
+                while (randomNumbers.Contains(number));
+
+                randomNumbers.Add(number);
+            }
+            label1.Text = PowerList[0];
+            label2.Text = PowerList[1];
+            label3.Text = PowerList[2];
+            label4.Text = PowerList[3];
+            label5.Text = PowerList[4];
+            label6.Text = PowerList[5];
+            label7.Text = PowerList[6];
+            label8.Text = PowerList[7];
+
+            Power p1 = new Power();
+            p1.Name = label1.Text;
+            Power p2 = new Power();
+            p2.Name = label2.Text;
+            Power p3 = new Power();
+            p3.Name = label3.Text;
+            Power p4 = new Power();
+            p4.Name = label4.Text;
+            Power p5 = new Power();
+            p5.Name = label5.Text;
+            Power p6 = new Power();
+            p6.Name = label6.Text;
+            Power p7 = new Power();
+            p7.Name = label7.Text;
+            Power p8 = new Power();
+            p8.Name = label8.Text;
+
+            Program.character.Powers.Add(p1);
+            Program.character.Powers.Add(p2);
+            Program.character.Powers.Add(p3);
+            Program.character.Powers.Add(p4);
+            Program.character.Powers.Add(p5);
+            Program.character.Powers.Add(p6);
+            Program.character.Powers.Add(p7);
+            Program.character.Powers.Add(p8);
+        }
+
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -160,6 +215,81 @@ namespace COMP123_S2019_FinalTestA.Views
 
         private void FirstNameDataLabel_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void ReasonDataLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GenerateEverythingPowers()
+        {
+            string PowerFile = @"..\..\Data\powers.txt";
+            var ReadPowers = File.ReadAllLines(PowerFile);
+            List<string> PowerList = ReadPowers.ToList();
+            int PowerEndNumber = ReadPowers.Length;
+
+            List<int> randomNumbers = new List<int>();
+            for (int i = 0; i < 4; i++)
+            {
+                int number;
+
+                do number = new Random().Next(0, PowerEndNumber);
+                while (randomNumbers.Contains(number));
+
+                randomNumbers.Add(number);
+            }
+            GP1Label.Text = PowerList[0];
+            GP2Label.Text = PowerList[1];
+            GP3Label.Text = PowerList[2];
+            GP4Label.Text = PowerList[3];
+
+            Power p1 = new Power();
+            p1.Name = GP1Label.Text;
+            Power p2 = new Power();
+            p2.Name = GP2Label.Text;
+            Power p3 = new Power();
+            p3.Name = GP3Label.Text;
+            Power p4 = new Power();
+            p4.Name = GP4Label.Text;
+
+            Program.character.Powers.Add(p1);
+            Program.character.Powers.Add(p2);
+            Program.character.Powers.Add(p3);
+            Program.character.Powers.Add(p4);
+        }
+            private void GenerateEverythingAvility()
+        {
+            List<int> randomNumbers = new List<int>();
+
+            for (int i = 0; i < 4; i++)
+            {
+                int number;
+
+                do number = new Random().Next(10, 51);
+                while (randomNumbers.Contains(number));
+
+                randomNumbers.Add(number);
+            }
+
+            GA1Label.Text = randomNumbers[0].ToString();
+            GA2Label.Text = randomNumbers[1].ToString();
+            GA3Label.Text = randomNumbers[2].ToString();
+            GA4Label.Text = randomNumbers[3].ToString();
+
+            Program.character.Fighting = GA1Label.Text;
+            Program.character.Agility = GA2Label.Text;
+            Program.character.Strength = GA3Label.Text;
+            Program.character.Endurance = GA4Label.Text;
+            
+        }
+        private void GenerateEverythingButton_Click(object sender, EventArgs e)
+        {
+
+            GenerateEverythingAvility();
+
+            GenerateEverythingPowers();
 
         }
     }
