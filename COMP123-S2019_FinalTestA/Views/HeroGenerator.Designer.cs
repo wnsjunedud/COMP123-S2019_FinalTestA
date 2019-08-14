@@ -44,7 +44,6 @@
             this.MentalLabel = new System.Windows.Forms.Label();
             this.FightingDataLabel = new System.Windows.Forms.Label();
             this.AgilityLabel = new System.Windows.Forms.Label();
-            this.PopularityLabel = new System.Windows.Forms.Label();
             this.PopulariyDataLabel = new System.Windows.Forms.Label();
             this.PsycheLabel = new System.Windows.Forms.Label();
             this.AgilityDataLabel = new System.Windows.Forms.Label();
@@ -58,11 +57,13 @@
             this.ReasonLabel = new System.Windows.Forms.Label();
             this.ReasonDataLabel = new System.Windows.Forms.Label();
             this.PhysicalLabel = new System.Windows.Forms.Label();
+            this.PopularityLabel = new System.Windows.Forms.Label();
             this.PowersPage = new System.Windows.Forms.TabPage();
             this.CharacterSheet = new System.Windows.Forms.TabPage();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.HeroMenuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -82,7 +83,6 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.NextButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.MainTabControl.SuspendLayout();
             this.IdentityPage.SuspendLayout();
             this.AbilityPage.SuspendLayout();
@@ -268,15 +268,6 @@
             this.AgilityLabel.Text = "Agility";
             this.AgilityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // PopularityLabel
-            // 
-            this.PopularityLabel.Location = new System.Drawing.Point(375, 120);
-            this.PopularityLabel.Name = "PopularityLabel";
-            this.PopularityLabel.Size = new System.Drawing.Size(180, 34);
-            this.PopularityLabel.TabIndex = 16;
-            this.PopularityLabel.Text = "Popularity";
-            this.PopularityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // PopulariyDataLabel
             // 
             this.PopulariyDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -403,6 +394,15 @@
             this.PhysicalLabel.Text = "Physical Abilities";
             this.PhysicalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // PopularityLabel
+            // 
+            this.PopularityLabel.Location = new System.Drawing.Point(375, 120);
+            this.PopularityLabel.Name = "PopularityLabel";
+            this.PopularityLabel.Size = new System.Drawing.Size(180, 34);
+            this.PopularityLabel.TabIndex = 16;
+            this.PopularityLabel.Text = "Popularity";
+            this.PopularityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // PowersPage
             // 
             this.PowersPage.Location = new System.Drawing.Point(8, 39);
@@ -455,6 +455,15 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(36, 36);
             this.toolStripButton2.Text = "toolStripButton2";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(36, 36);
+            this.toolStripButton3.Text = "toolStripButton3";
             // 
             // HeroMenuStrip
             // 
@@ -561,37 +570,37 @@
             // contentsToolStripMenuItem
             // 
             this.contentsToolStripMenuItem.Name = "contentsToolStripMenuItem";
-            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
+            this.contentsToolStripMenuItem.Size = new System.Drawing.Size(210, 38);
             this.contentsToolStripMenuItem.Text = "&Contents";
             // 
             // indexToolStripMenuItem
             // 
             this.indexToolStripMenuItem.Name = "indexToolStripMenuItem";
-            this.indexToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
+            this.indexToolStripMenuItem.Size = new System.Drawing.Size(210, 38);
             this.indexToolStripMenuItem.Text = "&Index";
             // 
             // searchToolStripMenuItem
             // 
             this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(210, 38);
             this.searchToolStripMenuItem.Text = "&Search";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(321, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(207, 6);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(324, 38);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(210, 38);
             this.aboutToolStripMenuItem.Text = "&About...";
             // 
             // NextButton
             // 
-            this.NextButton.Location = new System.Drawing.Point(695, 494);
+            this.NextButton.Location = new System.Drawing.Point(695, 483);
             this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(75, 23);
+            this.NextButton.Size = new System.Drawing.Size(75, 34);
             this.NextButton.TabIndex = 1;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
@@ -599,22 +608,13 @@
             // 
             // BackButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(12, 494);
+            this.BackButton.Location = new System.Drawing.Point(12, 483);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(75, 23);
+            this.BackButton.Size = new System.Drawing.Size(75, 34);
             this.BackButton.TabIndex = 2;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
-            // 
-            // toolStripButton3
-            // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(36, 36);
-            this.toolStripButton3.Text = "toolStripButton3";
             // 
             // HeroGenerator
             // 
