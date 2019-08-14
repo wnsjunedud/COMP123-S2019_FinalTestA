@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 /*
  * Student Name : Juneyeong Lee
  * Student Id : 301043697
- * Description : This is the Power Class
+ * Description : This is the Power Data Container Class
  */
 
 namespace COMP123_S2019_FinalTestA.Objects
 {
-    class Power
+    public class Power
     {
     //public Properties
     public string Name { get; set; }

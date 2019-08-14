@@ -136,10 +136,10 @@ namespace COMP123_S2019_FinalTestA.Objects
     public int Karma { get; set; }
     
     //Power List
-    List<Power> Powers;
+    public List<Power> Powers;
 
     //Constructor
-    Hero()
+    public Hero()
         {
         //instantiates an empty Power List
         Powers = new List<Power>();
